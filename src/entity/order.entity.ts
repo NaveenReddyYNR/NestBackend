@@ -1,6 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { MinLength, MaxLength, IsString, Matches } from 'class-validator';
 import * as bcrypt from 'bcrypt';
+import { IsString, Matches, MaxLength, MinLength } from 'class-validator';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('tasks')
 export class TaskEntity {

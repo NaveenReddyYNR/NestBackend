@@ -1,20 +1,17 @@
 import {
   Body,
   Controller,
-  Res,
-  UseGuards,
-  Post,
-  ValidationPipe,
   ForbiddenException,
-  Req,
+  Post,
+  Res,
+  UseGuards
 } from '@nestjs/common';
-import { LoginAccountDto, SignupAccount } from 'src/tasks/dto/login.dto';
-import { LoginService } from './login.service';
-import { Login, SignUp } from './login.dto';
-import { Response } from 'express';
-import * as bcrypt from 'bcrypt';
 import { AuthGuard } from '@nestjs/passport';
+import { Response } from 'express';
+import { LoginAccountDto, SignupAccount } from 'src/tasks/dto/login.dto';
 import { GetUser } from './get-user.decorater';
+import { Login, SignUp } from './login.dto';
+import { LoginService } from './login.service';
 
 @Controller('auth')
 export class LoginController {
